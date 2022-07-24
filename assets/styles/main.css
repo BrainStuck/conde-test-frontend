@@ -77,6 +77,10 @@ button {
   height: 50px;
   font-size: 30px;
   margin-bottom: 50px;
+  background-color: rgb(38, 129, 133);
+  color: antiquewhite;
+  font-weight: 700;
+  border: none;
 }
 
 .share {
