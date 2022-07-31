@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "DungGeunMo", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+}
+
+/* main page */
 body {
   background-color: black;
   display: flex;
@@ -12,23 +26,27 @@ body {
   overflow: hidden;
 }
 
-header {
+.mainSlide {
   width: 100%;
-  height: 50px;
-  background-color: red;
-}
-
-#slide_1 {
-  width: 100%;
-  height: 590px;
-}
-
-#slide_1 > main {
-  height: 590px;
-  display: flex;
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
+  display: none;
+}
+
+#slide_1 {
+  height: 640px;
+  padding-top: 35px;
+}
+
+.slide {
+  height: 590px;
+}
+
+.testSlide {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   background: linear-gradient(
     to bottom,
     red,
@@ -39,11 +57,12 @@ header {
     navy,
     purple
   );
+  display: none;
 }
 
 .main_title {
   position: relative;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 700;
   color: white;
 }
@@ -65,22 +84,24 @@ header {
 }
 
 .test_desc {
-  font-size: 20px;
-  font-weight: 200;
+  font-size: 17px;
+  font-weight: 700;
   color: white;
   text-align: center;
   margin-bottom: 50px;
+  line-height: 30px;
 }
 
-button {
+.start_btn {
   width: 300px;
   height: 50px;
   font-size: 30px;
   margin-bottom: 50px;
-  background-color: rgb(38, 129, 133);
+  background-color: rgb(168, 12, 121);
   color: antiquewhite;
   font-weight: 700;
   border: none;
+  cursor: pointer;
 }
 
 .share {
@@ -88,12 +109,15 @@ button {
 }
 
 .chat {
-  position: absolute;
-  width: 30%;
-  height: 30%;
-  top: 232px;
-  left: 400px;
+  width: 350px;
+  height: 250px;
   animation: zoom-in-zoom-out 1s ease infinite;
+}
+
+.chat-img {
+  top: 20px;
+  left: -80px;
+  position: absolute;
 }
 
 @keyframes zoom-in-zoom-out {
@@ -106,4 +130,94 @@ button {
   100% {
     transform: scale(1, 1);
   }
+}
+
+.main_page {
+  background: linear-gradient(
+    to bottom,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    navy,
+    purple
+  );
+}
+
+.main_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* slide 2 */
+.question_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 100px;
+  background-color: blanchedalmond;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-align: center;
+  border: 2px solid rgb(232, 68, 68);
+  padding: 10px;
+}
+
+.main_img_group {
+  position: relative;
+}
+
+#header {
+  height: 50px;
+  background-color: red;
+  display: none;
+}
+
+.activeSlide {
+  display: flex;
+}
+
+.select_btn button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: inline;
+  border: solid 1px brown;
+}
+.select_btn button:not(:last-child) {
+  margin-right: 20px;
+}
+
+.select_btn button:hover {
+  background-color: darksalmon;
+}
+
+.select_btn {
+  margin-top: 10px;
+}
+
+#myProgress {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: blanchedalmond;
+}
+#myBar {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: rgb(238, 142, 174);
+}
+#myBarText {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
