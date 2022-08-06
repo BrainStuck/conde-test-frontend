@@ -1,73 +1,51 @@
-let currentSlide = 0;
-let currentTmpSlide = 0;
-/* 이런 방법도 있다.
-let btnBoolean = [false, false, false, false,
-                  false, false, false, false,
-                  false, false, false, false];
-*/
+let currentSlide = 1;
 let total = 0;
-let currentSlidePage = false;
+let currentSlidePage = true;
+
+const goNextSlide = () => {
+  const currentSlideRef = document.getElementById(`slide_${currentSlide}`);
+  currentSlideRef.classList.remove("activeSlide");
+
+  const nextSlideRef = document.getElementById(`slide_${currentSlide + 1}`);
+  nextSlideRef.classList.add("activeSlide");
+
+  const myBarText = document.getElementById("myBarText");
+  myBarText.innerText = `${currentSlide} 페이지 / 3 페이지`;
+
+  const myBar = document.getElementById("myBar");
+  myBar.style.width = `${(currentSlide / 3) * 100}%`;
+
+  currentSlide += 1;
+};
 
 document.querySelectorAll(".start_btn").forEach((element) => {
   element.addEventListener("click", () => {
-    if (currentSlide === 0) {
-      header.style.display = "block";
-    } else if (currentSlide <= 3) {
-      currentTmpSlide = (currentSlide - 1) * 4;
+    if (currentSlide === 1) {
+      const headerRef = document.getElementById("header");
+      headerRef.style.display = "block";
+      goNextSlide();
+    } else if (currentSlide <= 4) {
       for (let i = 1; i <= 4; i++) {
-        document
-          .querySelectorAll(`input[name="btn${currentTmpSlide + i}"`)
-          .forEach((ele, index) => {
-            if (ele.checked === true) {
-              /*
-            switch (index) {
-              case 0:
-                total -= 2
-                break;
-            }
-            */
-              total += ele.value * 1;
-              currentSlidePage = true;
-            }
-          });
+        let isChecked = false;
+        const questionRef = document.querySelectorAll(
+          `input[name=btn${(currentSlide - 2) * 4 + i}]`
+        );
+        questionRef.forEach((elem) => {
+          if (elem.checked === true) {
+            total += elem.value * 1;
+            isChecked = true;
+          }
+        });
+        if (isChecked === false) {
+          alert("모든 질문에 체크를 완료해주세요.");
+          return;
+        }
       }
-
-      if (currentSlidePage === false) {
-        alert("모든 질문에 답을 선택해 주세요.");
-        return false;
+      if (currentSlide !== 4) {
+        goNextSlide();
       } else {
-        currentSlidePage = false;
+        console.log(total);
       }
-    }
-    currentSlide = currentSlide + 1;
-
-    if (currentSlide === 3) {
-      document.querySelector("#test_final_btn").style.display = "block";
-      document.querySelector("#test_next_btn").style.display = "none";
-    }
-
-    if (currentSlide === 4) {
-      sessionStorage.setItem("total", total);
-      location.href = "./result.html";
-    } else {
-      const currentSlideRef = document.getElementById(`slide_${currentSlide}`);
-      currentSlideRef.classList.remove("activeSlide");
-
-      const nextSlideRef = document.getElementById(`slide_${currentSlide + 1}`);
-      nextSlideRef.classList.add("activeSlide");
-
-      const myBarText = document.getElementById("myBarText");
-      myBarText.innerText = `${currentSlide} 페이지 / 3 페이지`;
-
-      const myBar = document.getElementById("myBar");
-      myBar.style.width = `${(currentSlide / 3) * 100}%`;
     }
   });
 });
-
-// const buttons = document.querySelectorAll(".btn");
-// for (const btn of buttons) {
-//   btn.addEventListener("click", () => {
-//     btn.style.backgroundColor = "red";
-//   });
-// }
