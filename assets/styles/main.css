@@ -1,0 +1,243 @@
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "DungGeunMo", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+}
+
+/* main page */
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 360px;
+  height: 640px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    navy,
+    purple
+  );
+}
+
+.mainSlide {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  display: none;
+}
+
+#slide_1 {
+  height: 640px;
+  padding-top: 35px;
+}
+
+.testSlide {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+
+.main_title {
+  position: relative;
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+}
+
+.main_img {
+  animation: rotate_image 6s linear infinite;
+  transform-origin: 50% 50%;
+  width: 200px;
+  height: 150px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+/* 꼰대이미지 돌아가는 애니메이션 */
+@keyframes rotate_image {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.test_desc {
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
+  line-height: 30px;
+}
+
+.start_btn {
+  width: 300px;
+  height: 50px;
+  font-size: 30px;
+  margin-bottom: 50px;
+  background-color: rgb(168, 12, 121);
+  color: antiquewhite;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.share {
+  color: white;
+}
+
+.chat {
+  width: 350px;
+  height: 250px;
+  animation: zoom-in-zoom-out 1s ease infinite;
+}
+
+.chat-img {
+  top: 20px;
+  left: -80px;
+  position: absolute;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.main_page {
+  background: linear-gradient(
+    to bottom,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    navy,
+    purple
+  );
+  display: flex;
+}
+
+.main_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* slide 2 */
+.question_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 100px;
+  background-color: blanchedalmond;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-align: center;
+  border: 2px solid rgb(232, 68, 68);
+  padding: 10px;
+}
+
+.main_img_group {
+  position: relative;
+}
+
+#header {
+  height: 50px;
+  background-color: red;
+  display: none;
+}
+
+.activeSlide {
+  display: flex;
+}
+
+/* 라디오 버튼 css */
+
+.select_btn input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: solid 1px brown;
+  cursor: pointer;
+}
+
+.select_btn input[type="radio"(:last-child)] {
+  margin-right: 20px;
+}
+
+.select_btn input[type="radio"]:hover {
+  background-color: darksalmon;
+}
+
+.select_btn input[type="radio"]:not(old):checked {
+  background: rgb(223, 124, 91);
+}
+
+.select_btn {
+  margin-top: 0px;
+}
+
+#myProgress {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: blanchedalmond;
+}
+#myBar {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: rgb(238, 142, 174);
+}
+#myBarText {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#test_final_btn {
+    display: none;
+}
