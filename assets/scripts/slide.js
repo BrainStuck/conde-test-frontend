@@ -49,13 +49,13 @@ document.querySelectorAll(".start_btn").forEach((element) => {
         goNextSlide();
       } else {
         if (total < -12) {
-          location.href = "/result.html?level=1";
+          location.href = "/conde-test-frontend/result.html?level=1";
         } else if (total < 0) {
-          location.href = "/result.html?level=2";
+          location.href = "/conde-test-frontend/result.html?level=2";
         } else if (total < 12) {
-          location.href = "/result.html?level=3";
+          location.href = "/conde-test-frontend/result.html?level=3";
         } else {
-          location.href = "/result.html?level=4";
+          location.href = "/conde-test-frontend/result.html?level=4";
         }
       }
     }
