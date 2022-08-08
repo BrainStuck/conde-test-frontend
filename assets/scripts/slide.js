@@ -37,14 +37,26 @@ document.querySelectorAll(".start_btn").forEach((element) => {
           }
         });
         if (isChecked === false) {
-          alert("모든 질문에 체크를 완료해주세요.");
+          alert("모든 질문에 응답을 완료해주세요.");
           return;
         }
       }
       if (currentSlide !== 4) {
+        if (currentSlide === 3) {
+          document.getElementById("test_next_btn").style.display = "none";
+          document.getElementById("test_final_btn").style.display = "block";
+        }
         goNextSlide();
       } else {
-        console.log(total);
+        if (total < -12) {
+          location.href = "/result.html?level=1";
+        } else if (total < 0) {
+          location.href = "/result.html?level=2";
+        } else if (total < 12) {
+          location.href = "/result.html?level=3";
+        } else {
+          location.href = "/result.html?level=4";
+        }
       }
     }
   });

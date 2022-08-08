@@ -24,6 +24,16 @@ body {
   height: 640px;
   border-radius: 10px;
   overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    navy,
+    purple
+  );
 }
 
 .mainSlide {
@@ -39,24 +49,10 @@ body {
   padding-top: 35px;
 }
 
-.slide {
-  height: 590px;
-}
-
 .testSlide {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(
-    to bottom,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    navy,
-    purple
-  );
   display: none;
 }
 
@@ -143,6 +139,7 @@ body {
     navy,
     purple
   );
+  display: flex;
 }
 
 .main_container {
@@ -182,23 +179,35 @@ body {
   display: flex;
 }
 
-.select_btn button {
+/* 라디오 버튼 css */
+
+.select_btn input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  display: inline-block;
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  display: inline;
   border: solid 1px brown;
+  cursor: pointer;
 }
-.select_btn button:not(:last-child) {
+
+.select_btn input[type="radio"(:last-child)] {
   margin-right: 20px;
 }
 
-.select_btn button:hover {
+.select_btn input[type="radio"]:hover {
   background-color: darksalmon;
 }
 
+.select_btn input[type="radio"]:not(old):checked {
+  background: rgb(223, 124, 91);
+}
+
 .select_btn {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 #myProgress {
@@ -220,4 +229,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#test_final_btn {
+    display: none;
 }
