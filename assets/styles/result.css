@@ -29,7 +29,17 @@ body {
   justify-content: center;
   align-items: center;
   line-height: 25px;
-  border: solid 1px white;
+  border: solid 2px white;
+  background: linear-gradient(
+    to bottom,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    navy,
+    purple
+  );
 }
 
 img {
@@ -37,10 +47,10 @@ img {
   height: 80%;
 }
 
-.result_level_1,
-.result_level_2,
-.result_level_3,
-.result_level_4 {
+#result_level_1,
+#result_level_2,
+#result_level_3,
+#result_level_4 {
   /* font-size: 40px; */
   color: white;
 }
@@ -52,3 +62,13 @@ img {
 .result {
   color: chartreuse;
 }
+
+/* .container_body {
+  position: absolute;
+  background-color: blanchedalmond;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
