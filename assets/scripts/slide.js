@@ -62,8 +62,18 @@ document.querySelectorAll(".start_btn").forEach((element) => {
   });
 });
 
+// 뒤로가기;
 const prevSlide = () => {
-  document.getElementById("prevSlide").addEventListener("click", () => {
-    location.href = "./result.html?level=4;";
-  });
+  const prevSlideBtn = document
+    .getElementById("prevSlide")
+    .addEventListener("click", () => {
+      const beforeSlide = document.getElementById(`slide_${currentSlide}`);
+      beforeSlide.classList.remove("activeSlide");
+
+      const beforeSlideRef = document.getElementById(
+        `slide_${currentSlide - 1}`
+      );
+      beforeSlideRef.classList.add("activeSlide");
+    });
 };
+prevSlide();
