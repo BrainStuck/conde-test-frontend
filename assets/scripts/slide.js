@@ -58,7 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
           spinner.style.display = "flex";
 
           setTimeout(() => {
-            spinner.style.display = "none";
             if (total < -12) {
               location.href = "./result.html?level=1";
             } else if (total < 0) {
