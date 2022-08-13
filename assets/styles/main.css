@@ -173,6 +173,7 @@ body {
   height: 50px;
   background-color: red;
   display: none;
+  position: relative;
 }
 
 .activeSlide {
@@ -240,4 +241,13 @@ body {
 
 #test_final_btn {
   display: none;
+}
+
+#prevSlide {
+  display: none;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 3px;
+  left: 5px;
 }

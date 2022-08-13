@@ -73,12 +73,7 @@ article > img {
   padding: 0px 0px 15px 0px;
 }
 
-/* .container_body {
-  position: absolute;
-  background-color: blanchedalmond;
-  width: 200px;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
+.kakao-share-icon {
+  /* width: 80%; */
+  height: 70%;
+}
