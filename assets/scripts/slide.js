@@ -54,15 +54,21 @@ document.addEventListener("DOMContentLoaded", () => {
           }
           slideSetting(++currentSlide);
         } else {
-          if (total < -12) {
-            location.href = "./result.html?level=1";
-          } else if (total < 0) {
-            location.href = "./result.html?level=2";
-          } else if (total < 12) {
-            location.href = "./result.html?level=3";
-          } else {
-            location.href = "./result.html?level=4";
-          }
+          const spinner = document.querySelector("#spinner-container");
+          spinner.style.display = "flex";
+
+          setTimeout(() => {
+            spinner.style.display = "none";
+            if (total < -12) {
+              location.href = "./result.html?level=1";
+            } else if (total < 0) {
+              location.href = "./result.html?level=2";
+            } else if (total < 12) {
+              location.href = "./result.html?level=3";
+            } else {
+              location.href = "./result.html?level=4";
+            }
+          }, 2000);
         }
       }
     });

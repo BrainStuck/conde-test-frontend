@@ -11,7 +11,7 @@
   <body>
     <div class="container">
       <!-- 꼰대 레벨 1 -->
-      <div id="result_level_1">
+      <div id="result_level_1" class="result-box">
         <div class="result">
           <h1>당신의 결과는...</h1>
         </div>
@@ -28,7 +28,7 @@
       </div>
 
       <!-- 꼰대 레벨 2 -->
-      <div id="result_level_2">
+      <div id="result_level_2" class="result-box">
         <div class="result">
           <h1>당신의 결과는...</h1>
         </div>
@@ -46,7 +46,7 @@
       </div>
 
       <!-- 꼰대 레벨 3 -->
-      <div id="result_level_3">
+      <div id="result_level_3" class="result-box">
         <div class="result">
           <h1>당신의 결과는...</h1>
         </div>
@@ -65,7 +65,7 @@
       </div>
 
       <!-- 꼰대 레벨 4 -->
-      <div id="result_level_4">
+      <div id="result_level_4" class="result-box">
         <div class="result">
           <h1>당신의 결과는...</h1>
         </div>
@@ -82,13 +82,16 @@
         </article>
       </div>
       <!-- 카카오 공유하기 버튼 -->
-      <a id="create-kakaotalk-sharing-btn" href="javascript:;">
-        <img
-          src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
-          alt="카카오톡 공유 보내기 버튼"
-          class="kakao-share-icon"
-        />
-      </a>
+      <div class="result-footer">
+        <a id="create-kakaotalk-sharing-btn" href="javascript:;">
+          <img
+            src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
+            alt="카카오톡 공유 보내기 버튼"
+            class="kakao-share-icon"
+          />
+        </a>
+        <a href="../" class="test-retry">테스트 다시하기 </a>
+      </div>
     </div>
     <script src="./assets/scripts/kakao.js"></script>
     <script src="./assets/scripts/result.js"></script>

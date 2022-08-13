@@ -63,7 +63,7 @@ article > img {
   color: white;
 }
 
-.container > div {
+.container > div.result-box {
   display: none;
 }
 
@@ -74,6 +74,20 @@ article > img {
 }
 
 .kakao-share-icon {
-  /* width: 80%; */
-  height: 70%;
+  width: 50px;
+  height: 50px;
+}
+
+.result-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.test-retry {
+  border: 2px solid antiquewhite;
+  background-color: antiquewhite;
+  margin-left: 20px;
+  width: 160px;
 }

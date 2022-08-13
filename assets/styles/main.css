@@ -155,10 +155,10 @@ body {
   align-items: center;
   flex-direction: column;
   width: 300px;
-  height: 100px;
+  height: 118px;
   background-color: blanchedalmond;
   border-radius: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   font-weight: 700;
   text-align: center;
   border: 2px solid rgb(232, 68, 68);
@@ -171,7 +171,6 @@ body {
 
 #header {
   height: 50px;
-  background-color: red;
   display: none;
   position: relative;
 }
@@ -193,10 +192,14 @@ body {
   border-radius: 50%;
   border: solid 1px brown;
   cursor: pointer;
+  margin: 0;
+  margin-top: 3px;
 }
-
-.select_btn input[type="radio"(:last-child)] {
-  margin-right: 20px;
+.select_btn input[type="radio"]:not(:last-child) {
+  margin-right: 12px;
+}
+.select_btn input[type="radio"]:not(:first-child) {
+  margin-left: 8px;
 }
 
 .select_btn input[type="radio"]:hover {
@@ -208,6 +211,7 @@ body {
 }
 
 .select_btn {
+  display: flex;
   margin-top: 0px;
 }
 
@@ -250,4 +254,36 @@ body {
   position: absolute;
   top: 3px;
   left: 5px;
+}
+
+.option-label {
+  font-size: 10px;
+  display: flex;
+}
+
+.option-label > span {
+  width: 56px;
+  margin-top: 4px;
+}
+
+#spinner-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#spinner-container > span {
+  font-size: 30px;
+  color: white;
+  margin-top: 50px;
+}
+
+#spinner {
+  animation: rotate_image 6s linear infinite;
+  width: 200px;
+  height: 200px;
 }
