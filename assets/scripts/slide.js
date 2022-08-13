@@ -79,8 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const prevSlideBtn = document.getElementById("prevSlide");
       prevSlideBtn.style.display = "none";
     }
-    const headerRef = document.getElementById("header");
-    headerRef.style.display = "block";
+    document.getElementById("test_next_btn").style.display = "block";
+    document.getElementById("test_final_btn").style.display = "none";
     slideSetting(--currentSlide);
   });
 });
