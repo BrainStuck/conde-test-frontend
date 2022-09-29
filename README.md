@@ -17,7 +17,7 @@
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 
 ## 📌 만들면서 배운 점
-화면 전환을 할 때, `querystring`과 `window.location` 함수를 통해 `spa`의 `history`를 사용하지 않고도 뒤로 가기나 화면 전환을 할 수 있다는 것을 배웠다. 또 `카카오 공유하기 api`를 직접 사용해 보면서 어려움도 있었지만 실제 기능 구현에 성공했을때 정말 뿌듯하고 보람찼다. 😊
+화면 전환을 할 때, `querystring`과 `window.location` 를 사용해서 `spa`의 `history`를 사용하지 않고도 뒤로 가기나 화면 전환을 할 수 있다는 것을 배웠다. 또 `카카오 공유하기 api`를 직접 사용해 보면서 어려움도 있었지만 실제 기능 구현에 성공했을때 정말 뿌듯하고 보람찼다. 😊
 
 ## 📌 프로젝트를 마치며
 공부하면서  처음으로  완성시킨  토이프로젝트인  만큼, 코드가  조금  어설프고  `Back-End`  없이  해서  사용자  통계를  내지  못했다는  것에  대한  아쉬움이  컸다.
